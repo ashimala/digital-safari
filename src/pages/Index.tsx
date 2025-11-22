@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/Header";
 import DemoFeed from "@/components/DemoFeed";
+import ArticleVerifier from "@/components/ArticleVerifier";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Eye, Brain, Users } from "lucide-react";
@@ -122,7 +123,8 @@ const Index = () => {
           </section>
         </div>
       ) : (
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-8 space-y-8">
+          <ArticleVerifier />
           <DemoFeed />
         </div>
       )}
